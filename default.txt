@@ -1,0 +1,88 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        string zip = TextBox1.Text;
+        weatherservice.Weather myservice = new weatherservice.Weather();
+        Label1.Text = myservice.GetCityWeatherByZIP(zip).Description;
+        Label2.Text = myservice.GetCityWeatherByZIP(zip).Temperature;
+        Label3.Text = myservice.GetCityWeatherByZIP(zip).City;
+        Label4.Text = myservice.GetCityWeatherByZIP(zip).State;
+        Label5.Text = myservice.GetCityWeatherByZIP(zip).RelativeHumidity;
+        int k = myservice.GetCityWeatherByZIP(zip).WeatherID;
+
+        if (k == 1)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/thunderstorms.gif";
+        }
+        if (k==2)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/partlycloudy.gif";
+        }
+        if (k==3)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/mostlycloudy.gif";
+        }
+        if (k==4)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/sunny.gif";
+        }
+        if (k==5)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/rain.gif";
+        }
+        if (k==6)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/showers.gif";
+        }
+        if (k==7)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/haze.gif";
+        }
+        if (k==8)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/mostlycloudy.gif";
+        }
+            if (k==9)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/partlycloudy.gif";
+        }
+            if (k==10)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/partlycloudy.gif";
+        }
+            if (k==11)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/partlycloudy.gif";
+        }
+            if (k==12)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/partlycloudy.gif";
+        }
+            if (k==13)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/partlycloudy.gif";
+        }
+            if (k==14)
+        {
+            Image2.ImageUrl = "http://ws.cdyne.com/WeatherWS/Images/mostlycloudy.gif";
+
+        }
+           
+        }
+        }
+
+
+
+
